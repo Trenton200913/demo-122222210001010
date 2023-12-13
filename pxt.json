@@ -1,5 +1,6 @@
 {
     "name": "Demo 122222210001010",
+    "version": "1.0.0",
     "description": "",
     "dependencies": {
         "device": "*"
