@@ -5,8 +5,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, l
     game.gameOver(true)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    for (let index = 0; index < 4; index++) {
-        mySprite.vy += -40
+    if (mySprite.vy == 0) {
+        mySprite.vy += -111
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
