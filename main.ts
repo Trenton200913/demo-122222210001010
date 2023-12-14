@@ -5,23 +5,18 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, l
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
     tiles.setCurrentTilemap(tilemap`level16`)
 })
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (mySprite.vy == 0) {
-        mySprite.vy += -111
-    }
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level7`)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.vx = -200
+    mySprite.vx = -250
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
     tiles.setCurrentTilemap(tilemap`level10`)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.vx = 200
+    mySprite.vx = 250
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
