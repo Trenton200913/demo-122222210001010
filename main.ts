@@ -24,7 +24,8 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.vx = 200
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, location) {
-    game.gameOver(true)
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
+    tiles.setCurrentTilemap(tilemap`level20`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     mySprite.vy += -90
@@ -32,6 +33,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
     tiles.setCurrentTilemap(tilemap`level13`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
+    game.setGameOverMessage(true, "Update 2.0")
+    game.gameOver(true)
 })
 let mySprite: Sprite = null
 game.splash("Project Sqare", "Made By Trenton")
